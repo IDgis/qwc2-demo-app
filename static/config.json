@@ -80,6 +80,12 @@
   "plugins": {
     "common": [
       {
+        "name": "OL3D",
+        "cfg": {
+
+        }
+      },
+      {
         "name": "Map",
         "cfg": {
           "mapOptions": {
@@ -473,6 +479,14 @@
       }
     ],
     "desktop": [
+      {
+        "name": "TaskButton",
+        "cfg": {
+          "position": 7,
+          "task": "OL3D",
+          "icon": "layers"
+        }
+      },
       {
         "name": "TaskButton",
         "cfg": {

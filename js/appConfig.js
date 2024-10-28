@@ -56,6 +56,7 @@ import TaskButtonPlugin from 'qwc2/plugins/TaskButton';
 import ThemeSwitcherPlugin from 'qwc2/plugins/ThemeSwitcher';
 import TimeManagerPlugin from 'qwc2/plugins/TimeManager';
 import TopBarPlugin from 'qwc2/plugins/TopBar';
+import OL3DPlugin from 'qwc2/plugins/OL3D';
 import {ZoomInPlugin, ZoomOutPlugin} from 'qwc2/plugins/ZoomButtons';
 import EditingSupport from 'qwc2/plugins/map/EditingSupport';
 import LocateSupport from 'qwc2/plugins/map/LocateSupport';
@@ -115,6 +116,7 @@ export default {
             MapInfoTooltipPlugin: MapInfoTooltipPlugin(),
             MapLegendPlugin: MapLegendPlugin,
             MapTipPlugin: MapTipPlugin,
+            OL3DPlugin: OL3DPlugin,
             MeasurePlugin: MeasurePlugin,
             NewsPopupPlugin: NewsPopupPlugin,
             PortalPlugin: PortalPlugin,
