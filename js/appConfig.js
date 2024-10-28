@@ -32,6 +32,7 @@ import LayerTreePlugin from 'qwc2/plugins/LayerTree';
 import LocateButtonPlugin from 'qwc2/plugins/LocateButton';
 import LoginUserPlugin from 'qwc2/plugins/LoginUser';
 import MapPlugin from 'qwc2/plugins/Map';
+import Map3DPlugin from 'qwc2/plugins/Map3D';
 import MapComparePlugin from 'qwc2/plugins/MapCompare';
 import MapCopyrightPlugin from 'qwc2/plugins/MapCopyright';
 import MapExportPlugin from 'qwc2/plugins/MapExport';
@@ -88,6 +89,7 @@ export default {
                 ScaleBarSupport: ScaleBarSupport,
                 SnappingSupport: SnappingSupport
             }),
+            Map3DPlugin: Map3DPlugin,
             APIPlugin: APIPlugin,
             AttributeTablePlugin: AttributeTablePlugin(/* CustomEditingInterface */),
             AuthenticationPlugin: AuthenticationPlugin,
