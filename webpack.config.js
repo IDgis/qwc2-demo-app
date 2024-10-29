@@ -73,14 +73,14 @@ module.exports = (env, argv) => {
             }),
             new CopyWebpackPlugin({
                 patterns: [
-                    { from: path.join(cesiumSource, cesiumWorkers), to: 'Workers' },
-                    { from: path.join(cesiumSource, 'Assets'), to: 'Assets' },
-                    { from: path.join(cesiumSource, 'Widgets'), to: 'Widgets' },
+                    { from: path.join(cesiumSource, cesiumWorkers), to: 'assets/cesium/Workers' },
+                    { from: path.join(cesiumSource, 'Assets'), to: 'assets/cesium/Assets' },
+                    { from: path.join(cesiumSource, 'Widgets'), to: 'assets/cesium/Widgets' },
                     { from: 'static' }
                 ]
             }),
             new webpack.DefinePlugin({
-                CESIUM_BASE_URL: JSON.stringify('')
+                CESIUM_BASE_URL: JSON.stringify('assets/cesium')
             })
         ],
         module: {
