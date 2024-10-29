@@ -7,6 +7,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const today = new Date();
 const buildDate = today.getFullYear() + "." + String(1 + today.getMonth()).padStart(2, '0') + "." + String(today.getDate()).padStart(2, '0');
 
+const cesiumSource = 'node_modules/cesium/Source';
+const cesiumWorkers = '../Build/Cesium/Workers';
+
 module.exports = (env, argv) => {
     const isProd = argv.mode === "production";
 
@@ -19,6 +22,9 @@ module.exports = (env, argv) => {
             path: path.resolve(__dirname, 'prod'),
             filename: 'dist/QWC2App.js',
             assetModuleFilename: 'dist/[hash][ext][query]'
+        },
+        amd: {
+            toUrlUndefined: true
         },
         watchOptions: {
             ignored: /node_modules(\\|\/)(?!qwc2)/
@@ -39,8 +45,12 @@ module.exports = (env, argv) => {
             port: 8080
         },
         resolve: {
+            alias: {
+                cesium: path.resolve(__dirname, cesiumSource)
+            },
             extensions: [".mjs", ".js", ".jsx"],
             fallback: {
+                fs: false,
                 path: require.resolve("path-browserify")
             }
         },
@@ -63,8 +73,14 @@ module.exports = (env, argv) => {
             }),
             new CopyWebpackPlugin({
                 patterns: [
+                    { from: path.join(cesiumSource, cesiumWorkers), to: 'Workers' },
+                    { from: path.join(cesiumSource, 'Assets'), to: 'Assets' },
+                    { from: path.join(cesiumSource, 'Widgets'), to: 'Widgets' },
                     { from: 'static' }
                 ]
+            }),
+            new webpack.DefinePlugin({
+                CESIUM_BASE_URL: JSON.stringify('')
             })
         ],
         module: {

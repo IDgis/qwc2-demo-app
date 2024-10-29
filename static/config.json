@@ -80,6 +80,12 @@
   "plugins": {
     "common": [
       {
+        "name": "Demo3D",
+        "cfg": {
+
+        }
+      },
+      {
         "name": "Map",
         "cfg": {
           "mapOptions": {

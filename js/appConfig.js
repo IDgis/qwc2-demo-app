@@ -42,6 +42,7 @@ import MapTipPlugin from 'qwc2/plugins/MapTip';
 import MeasurePlugin from 'qwc2/plugins/Measure';
 import NewsPopupPlugin from 'qwc2/plugins/NewsPopup';
 import PortalPlugin from 'qwc2/plugins/Portal';
+import Demo3DPlugin from 'qwc2/plugins/Demo3D';
 import PrintPlugin from 'qwc2/plugins/Print';
 import ProcessNotificationsPlugin from 'qwc2/plugins/ProcessNotifications';
 import RasterExportPlugin from 'qwc2/plugins/RasterExport';
@@ -108,6 +109,7 @@ export default {
             LayerTreePlugin: LayerTreePlugin,
             LocateButtonPlugin: LocateButtonPlugin,
             LoginUserPlugin: LoginUserPlugin,
+            Demo3DPlugin: Demo3DPlugin,
             MapComparePlugin: MapComparePlugin,
             MapCopyrightPlugin: MapCopyrightPlugin,
             MapExportPlugin: MapExportPlugin,
